@@ -1,6 +1,13 @@
-const App = () => {
-  return <h1 class="text-3xl font-bold underline">The Obsiddian Assembly</h1>;
-};
+import HeroSection from "./sections/HeroSection";
+import PlacesSection from "./sections/PlacesSection";
 
+const App = () => {
+  return (
+    <main>
+      <HeroSection />
+      <PlacesSection />
+    </main>
+  );
+};
 
 export default App;
