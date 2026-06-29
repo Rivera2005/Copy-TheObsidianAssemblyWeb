@@ -1,32 +1,41 @@
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 const Navbar = () => {
-    return(
-         <div className="grid grid-cols-2 md:grid-cols-3 items-center p-3 md:px-10">
-        <div className="flex flex-col items-start font-jubilee text-2xl md:text-4xl text-amber-50 leading-none">
-          <div className="flex flex-col items-center ">
-            <span>The</span>
-            <span>Obsidian</span>
-            <span className="block translate-x-5 md:translate-x-10">Assembly</span>
-          </div>
+  useGSAP(() => {
+    gsap.from(".nav", {
+      yPercent: -100,
+      duration: 1,
+      ease: "power1.out",
+    });
+  });
+  return (
+    <header className="w-full z-50 nav">
+      <nav className="grid grid-cols-2 md:grid-cols-3 px-5 pt-1 md:px-10 md:pt-3">
+        <div className="flex flex-col font-jubilee text-[#F1EADE] text-2xl md:text-3xl leading-none">
+          <span className="pl-5 md:pl-6">The</span>
+          <span>Obsidian</span>
+          <span className="pl-6 md:pl-7">Assembly</span>
         </div>
 
-        <div className="hidden items-center justify-center gap-4 md:flex">
-          <span className="font-switzer uppercase bg-gray-50/25 py-1.5 px-24 rounded-lg text-amber-50">
+        <div className="hidden md:flex items-center justify-center gap-2">
+          <span className="font-switzer uppercase py-1.5 w-56 rounded-lg text-[#F1EADE] text-sm bg-white/10 backdrop-blur-md borde shadow-sm text-center">
             places
           </span>
-
-          <div className="w-[1px] h-16 bg-black shrink-0"></div>
-
-          <span className="font-switzer uppercase bg-gray-50/25 py-1.5 px-24 rounded-lg text-amber-50">
+          <div className="bg-black shrink-0 w-px h-16"></div>
+          <span className="font-switzer uppercase py-1.5 w-56 rounded-lg text-[#F1EADE] text-sm bg-white/10 backdrop-blur-md borde shadow-sm text-center">
             objects
           </span>
         </div>
-        <div className="flex justify-end">
-          <span className="font-switzer uppercase bg-amber-50/75 py-2 pl-20 md:pl-44 pr-4 rounded-lg text-black">
-            menu
+
+        <div className="flex items-center justify-end">
+          <span className="font-switzer uppercase py-1.5 w-52 rounded-lg text-black text-sm bg-[#F1EADE] backdrop-blur-md borde shadow-sm text-right pr-4">
+            Menu
           </span>
         </div>
-      </div>
-    )
-}
+      </nav>
+    </header>
+  );
+};
 
-export default Navbar
+export default Navbar;

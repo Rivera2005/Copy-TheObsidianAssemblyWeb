@@ -37,9 +37,12 @@
 }
 
 @theme {
-  --font-switzer: "Switzer", sans-serif; /*Uso normal*/
-  --font-jubilee: "OTJubilee", serif; /*Subtitulos */
-  --font-voyage: "Voyage", serif;  /*Titulos grandes*/
+  --font-switzer: "Switzer", sans-serif;
+  /*Uso normal*/
+  --font-jubilee: "OTJubilee", serif;
+  /*Subtitulos */
+  --font-voyage: "Voyage", serif;
+  /*Titulos grandes*/
 }
 
 body {
